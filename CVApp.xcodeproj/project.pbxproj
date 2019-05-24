@@ -12,6 +12,8 @@
 		8F08AF002298727700465E71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F08AEFE2298727700465E71 /* Main.storyboard */; };
 		8F08AF022298727900465E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F08AF012298727900465E71 /* Assets.xcassets */; };
 		8F08AF052298727900465E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F08AF032298727900465E71 /* LaunchScreen.storyboard */; };
+		8F08AF0D229872A000465E71 /* CVModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08AF0C229872A000465E71 /* CVModels.swift */; };
+		8F08AF0F22989F3900465E71 /* CVConnectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08AF0E22989F3900465E71 /* CVConnectionHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		8F08AF012298727900465E71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F08AF042298727900465E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F08AF062298727900465E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F08AF0C229872A000465E71 /* CVModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVModels.swift; sourceTree = "<group>"; };
+		8F08AF0E22989F3900465E71 /* CVConnectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVConnectionHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,12 @@
 			children = (
 				8F08AEFA2298727700465E71 /* AppDelegate.swift */,
 				8F08AEFC2298727700465E71 /* ViewController.swift */,
+				8F08AF0C229872A000465E71 /* CVModels.swift */,
 				8F08AEFE2298727700465E71 /* Main.storyboard */,
 				8F08AF012298727900465E71 /* Assets.xcassets */,
 				8F08AF032298727900465E71 /* LaunchScreen.storyboard */,
 				8F08AF062298727900465E71 /* Info.plist */,
+				8F08AF0E22989F3900465E71 /* CVConnectionHelper.swift */,
 			);
 			path = CVApp;
 			sourceTree = "<group>";
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F08AF0F22989F3900465E71 /* CVConnectionHelper.swift in Sources */,
 				8F08AEFD2298727700465E71 /* ViewController.swift in Sources */,
+				8F08AF0D229872A000465E71 /* CVModels.swift in Sources */,
 				8F08AEFB2298727700465E71 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
