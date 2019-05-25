@@ -23,6 +23,7 @@
 		8F08AF1E2298BFDD00465E71 /* CVRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08AF1D2298BFDD00465E71 /* CVRouter.swift */; };
 		8F08AF202298E36900465E71 /* CVCellTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F08AF1F2298E36900465E71 /* CVCellTitle.xib */; };
 		8F08AF292298E9F300465E71 /* CVConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08AF282298E9F300465E71 /* CVConstants.swift */; };
+		8FA6400322998F1D005E45FE /* CVErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA6400222998F1D005E45FE /* CVErrorHelper.swift */; };
 		8FC9859B229906F200261293 /* CVAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC9859A229906F200261293 /* CVAppTests.swift */; };
 		8FC985A32299253000261293 /* InteractorParseDataInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC985A22299253000261293 /* InteractorParseDataInViewModel.swift */; };
 		8FC985AB22992CEC00261293 /* CVAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC985AA22992CEC00261293 /* CVAppUITests.swift */; };
@@ -64,6 +65,7 @@
 		8F08AF1D2298BFDD00465E71 /* CVRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVRouter.swift; sourceTree = "<group>"; };
 		8F08AF1F2298E36900465E71 /* CVCellTitle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CVCellTitle.xib; sourceTree = "<group>"; };
 		8F08AF282298E9F300465E71 /* CVConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVConstants.swift; sourceTree = "<group>"; };
+		8FA6400222998F1D005E45FE /* CVErrorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVErrorHelper.swift; sourceTree = "<group>"; };
 		8FC98598229906F200261293 /* CVAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CVAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC9859A229906F200261293 /* CVAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVAppTests.swift; sourceTree = "<group>"; };
 		8FC9859C229906F200261293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -171,11 +173,11 @@
 		8F08AF242298E5FC00465E71 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8F08AF252298E60500465E71 /* Helpers */,
 				8F08AEFA2298727700465E71 /* AppDelegate.swift */,
 				8F08AF012298727900465E71 /* Assets.xcassets */,
 				8F08AF032298727900465E71 /* LaunchScreen.storyboard */,
 				8F08AF062298727900465E71 /* Info.plist */,
-				8F08AF252298E60500465E71 /* Helpers */,
 				8F08AF142298AC7400465E71 /* CVProtocols.swift */,
 				8F08AF282298E9F300465E71 /* CVConstants.swift */,
 			);
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				8F08AF0E22989F3900465E71 /* CVConnectionHelper.swift */,
+				8FA6400222998F1D005E45FE /* CVErrorHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				8F08AF172298AF4E00465E71 /* CVPresenter.swift in Sources */,
 				8F08AF292298E9F300465E71 /* CVConstants.swift in Sources */,
 				8F08AF112298AAC600465E71 /* CVCellTitle.swift in Sources */,
+				8FA6400322998F1D005E45FE /* CVErrorHelper.swift in Sources */,
 				8F08AF1C2298B3F900465E71 /* CVInteractor.swift in Sources */,
 				8F08AEFB2298727700465E71 /* AppDelegate.swift in Sources */,
 			);

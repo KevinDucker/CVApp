@@ -86,3 +86,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
   }
 }
 
+// MARK: - CVErrorHelperToViewControllerProtocol implementation
+extension ViewController: CVErrorHelperToViewControllerProtocol {
+  func showErrorModal(errorAlert: UIAlertController) {
+    self.tableView.refreshControl?.endRefreshing()
+    self.present(errorAlert, animated: true, completion: nil)
+  }
+}

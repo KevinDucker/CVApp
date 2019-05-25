@@ -47,6 +47,7 @@ protocol CVInteractorToPresenterProtocol {
  **/
 protocol CVInteractorToAPIDataManagerProtocol {
   var interactor: CVAPIDataManagerToInteractorProtocol? { get set }
+  var errorHelper: CVAPIDataManagerToErrorHelperProtocol? { get set }
   func getCVDataFromService()
 }
 
@@ -69,4 +70,19 @@ protocol CVPresenterToRouterProtocol {
  **/
 protocol CVCellConfigure {
   func configure(element: CVViewModelProtocol)
+}
+
+/**
+ * DataManager -> ErrorHelper
+ **/
+protocol CVAPIDataManagerToErrorHelperProtocol {
+  var view: CVErrorHelperToViewControllerProtocol? { get set}
+  func didGetError(error: CVErrorHelper.ErrorTypes)
+}
+
+/**
+ *  ErrorHelper -> ViewController
+ **/
+protocol CVErrorHelperToViewControllerProtocol {
+  func showErrorModal(errorAlert: UIAlertController)
 }
