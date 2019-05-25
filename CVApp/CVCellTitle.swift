@@ -16,7 +16,7 @@ class CVCellTitle: UITableViewCell {
   let titleSize: CGFloat = 16
 
   @IBOutlet weak var cvContent: UIView!
-  @IBOutlet weak var cvPhoto: UIImageView!
+  @IBOutlet weak var cvDesc: UILabel!
   @IBOutlet weak var cvName: UILabel!
 
   override func awakeFromNib() {
@@ -36,17 +36,16 @@ class CVCellTitle: UITableViewCell {
     cvContent.layer.shadowOpacity = 0.23
     cvContent.layer.shadowRadius = 8
 
-    cvPhoto.layer.cornerRadius = 4
-    cvPhoto.image = #imageLiteral(resourceName: "DisclosureBlue")
-
     cvName.textAlignment = .left
     cvName.textColor = UIColor.darkGray
+    cvDesc.textAlignment = .left
+    cvDesc.textColor = UIColor.darkGray
   }
 }
 
 extension CVCellTitle: CVCellConfigure {
   func configure(element: CVViewModelProtocol) {
     cvName.text = element.title
-    cvPhoto.image = UIImage(named: element.image)
+    cvDesc.text = element.image
   }
 }

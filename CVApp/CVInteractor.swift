@@ -14,6 +14,10 @@ class CVInteractor {
   var presenter: CVInteractorToPresenterProtocol?
   var dataHelper: CVInteractorToAPIDataManagerProtocol?
 
+  private func parseDataInViewModel(cvData: CVData) {
+    let model = CVViewModel(image: cvData.summary, title: cvData.name)
+    presenter?.didGetData(model: model)
+  }
 }
 
 extension CVInteractor: CVPresenterToInteractorProtocol {
@@ -23,7 +27,7 @@ extension CVInteractor: CVPresenterToInteractorProtocol {
 }
 
 extension CVInteractor: CVAPIDataManagerToInteractorProtocol {
-  func didGetCVDataFromService() {
-    presenter?.didGetData()
+  func didGetCVDataFromService(cvData: CVData) {
+    parseDataInViewModel(cvData: cvData)
   }
 }

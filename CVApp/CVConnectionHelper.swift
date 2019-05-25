@@ -20,7 +20,7 @@ class CVConnectionHelper {
   }
 
   func loadCVData() {
-    let urlRaw = "https://github.globant.com/raw/gist/kevin-ducker/b67069b1b98822f230712af3ad986741/raw/2212cd6a55c19b0d0e0192c7d681a04a852000e5/CVJson?token=AAACJHPABwcP1xyaBi7wW-a5ZL1C3tAAks5c8dMnwA%3D%3D"
+    let urlRaw = "https://gist.githubusercontent.com/KevinDucker/7e0656d0bfeb59d125ace3f07082db1d/raw/3e60b3d8a1178bd6f50d70a097c9379396476887/CVJson.json"
     guard let url = URL(string: urlRaw) else { return }
     let task = session.dataTask(with: url) { data, response, error in
       if let error = error {
@@ -36,7 +36,9 @@ class CVConnectionHelper {
           decoder.keyDecodingStrategy = .convertFromSnakeCase
           let cv = try decoder.decode(CVData.self, from: data)
           print(cv)
-          self.interactor?.didGetCVDataFromService()
+          DispatchQueue.main.async {
+            self.interactor?.didGetCVDataFromService(cvData: cv)
+          }
         } catch let jsonError {
           debugPrint("Failed to decode", jsonError)
           //Error alert Do it

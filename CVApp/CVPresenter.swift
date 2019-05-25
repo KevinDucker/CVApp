@@ -38,7 +38,6 @@ extension CVPresenter: CVViewToPresenterProtocol {
     self.viewController = viewController
 //    self.elements = self.loadInvesmentsList()
     interactor?.getCVData()
-    self.view?.updateView(entities: elements)
   }
 
   /*
@@ -66,6 +65,8 @@ extension CVPresenter: CVViewToPresenterProtocol {
 }
 
 extension CVPresenter: CVInteractorToPresenterProtocol {
-  func didGetData() {
+  func didGetData(model: CVViewModel) {
+    elements.append(model)
+    self.view?.updateView(entities: elements)
   }
 }

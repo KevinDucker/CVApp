@@ -44,7 +44,7 @@ protocol CVPresenterToInteractorProtocol {
  * Interactor -> Presenter
  **/
 protocol CVInteractorToPresenterProtocol {
-  func didGetData()
+  func didGetData(model: CVViewModel)
 }
 
 /**
@@ -59,7 +59,7 @@ protocol CVInteractorToAPIDataManagerProtocol {
  * DataManager -> Interactor
  **/
 protocol CVAPIDataManagerToInteractorProtocol {
-  func didGetCVDataFromService()
+  func didGetCVDataFromService(cvData: CVData)
 }
 
 /**
