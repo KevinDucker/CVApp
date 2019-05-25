@@ -10,13 +10,13 @@ class InteractorParseDataInViewModel: XCTestCase {
   // MARK: - Test functions
   func testExample() {
     let interactor = CVInteractor()
-    let data = CVData(name: "kevin",
+    let data = CVData(name: "Mark",
                       summary: "developer",
                       summaryQualifications: "Swift",
                       languages: "Spanish",
-                      carrer: [Jobs(name: "Citi",
+                      carrer: [Jobs(name: "CVApp",
                                     position: "Dev",
-                                    seniority: "Jr",
+                                    seniority: "Senior",
                                     description: "Make apps")])
     XCTAssertNotNil(interactor.didGetCVDataFromService(cvData: data))
   }

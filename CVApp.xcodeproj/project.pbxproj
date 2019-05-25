@@ -191,8 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				8FC9859A229906F200261293 /* CVAppTests.swift */,
-				8FC9859C229906F200261293 /* Info.plist */,
 				8FC985A22299253000261293 /* InteractorParseDataInViewModel.swift */,
+				8FC9859C229906F200261293 /* Info.plist */,
 			);
 			path = CVAppTests;
 			sourceTree = "<group>";
