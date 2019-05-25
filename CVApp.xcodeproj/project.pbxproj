@@ -22,6 +22,7 @@
 		8F08AF1C2298B3F900465E71 /* CVInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08AF1B2298B3F900465E71 /* CVInteractor.swift */; };
 		8F08AF1E2298BFDD00465E71 /* CVRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08AF1D2298BFDD00465E71 /* CVRouter.swift */; };
 		8F08AF202298E36900465E71 /* CVCellTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F08AF1F2298E36900465E71 /* CVCellTitle.xib */; };
+		8F08AF292298E9F300465E71 /* CVConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08AF282298E9F300465E71 /* CVConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		8F08AF1B2298B3F900465E71 /* CVInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVInteractor.swift; sourceTree = "<group>"; };
 		8F08AF1D2298BFDD00465E71 /* CVRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVRouter.swift; sourceTree = "<group>"; };
 		8F08AF1F2298E36900465E71 /* CVCellTitle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CVCellTitle.xib; sourceTree = "<group>"; };
+		8F08AF282298E9F300465E71 /* CVConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				8F08AF062298727900465E71 /* Info.plist */,
 				8F08AF252298E60500465E71 /* Helpers */,
 				8F08AF142298AC7400465E71 /* CVProtocols.swift */,
+				8F08AF282298E9F300465E71 /* CVConstants.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				8F08AEFD2298727700465E71 /* ViewController.swift in Sources */,
 				8F08AF0D229872A000465E71 /* CVModels.swift in Sources */,
 				8F08AF172298AF4E00465E71 /* CVPresenter.swift in Sources */,
+				8F08AF292298E9F300465E71 /* CVConstants.swift in Sources */,
 				8F08AF112298AAC600465E71 /* CVCellTitle.swift in Sources */,
 				8F08AF1C2298B3F900465E71 /* CVInteractor.swift in Sources */,
 				8F08AEFB2298727700465E71 /* AppDelegate.swift in Sources */,

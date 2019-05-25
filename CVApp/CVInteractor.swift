@@ -14,8 +14,15 @@ class CVInteractor {
   var presenter: CVInteractorToPresenterProtocol?
   var dataHelper: CVInteractorToAPIDataManagerProtocol?
 
+  typealias constants = CVConstants
+
   private func parseDataInViewModel(cvData: CVData) {
-    let model = CVViewModel(image: cvData.summary, title: cvData.name)
+    let model = [
+      CVViewModel(title: constants.name, desc: cvData.name),
+      CVViewModel(title: constants.sumary, desc: cvData.summary),
+      CVViewModel(title: constants.summaryQualifications, desc: cvData.summaryQualifications),
+      CVViewModel(title: constants.languages, desc: cvData.languages),
+      CVViewModel(title: constants.carrer, desc: (cvData.carrer.first?.description)!)]
     presenter?.didGetData(model: model)
   }
 }

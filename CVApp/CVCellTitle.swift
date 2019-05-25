@@ -46,6 +46,6 @@ class CVCellTitle: UITableViewCell {
 extension CVCellTitle: CVCellConfigure {
   func configure(element: CVViewModelProtocol) {
     cvName.text = element.title
-    cvDesc.text = element.image
+    cvDesc.text = element.desc
   }
 }

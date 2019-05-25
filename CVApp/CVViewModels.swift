@@ -12,8 +12,8 @@ import Foundation
  * View elements for cell.
  **/
 struct CVViewModel: CVViewModelProtocol {
-  var image: String
   var title: String
+  var desc: String
 }
 
 /**
@@ -21,5 +21,5 @@ struct CVViewModel: CVViewModelProtocol {
  **/
 protocol CVViewModelProtocol {
   var title: String { get set }
-  var image: String { get set }
+  var desc: String { get set }
 }

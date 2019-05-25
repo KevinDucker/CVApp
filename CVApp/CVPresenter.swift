@@ -18,13 +18,6 @@ class CVPresenter {
   var viewController: ViewController?
   var elements: [CVViewModelProtocol] = []
 
-  private func loadInvesmentsList() -> [CVViewModelProtocol] {
-    return [CVViewModel(image: "", title: ""),
-            CVViewModel(image: "", title: ""),
-            CVViewModel(image: "", title: "")
-    ]
-  }
-
 }
 
 extension CVPresenter: CVViewToPresenterProtocol {
@@ -36,7 +29,6 @@ extension CVPresenter: CVViewToPresenterProtocol {
 
   func initialLoad(from viewController: ViewController) {
     self.viewController = viewController
-//    self.elements = self.loadInvesmentsList()
     interactor?.getCVData()
   }
 
@@ -65,8 +57,8 @@ extension CVPresenter: CVViewToPresenterProtocol {
 }
 
 extension CVPresenter: CVInteractorToPresenterProtocol {
-  func didGetData(model: CVViewModel) {
-    elements.append(model)
+  func didGetData(model: [CVViewModel]) {
+    elements = model
     self.view?.updateView(entities: elements)
   }
 }
