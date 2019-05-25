@@ -39,5 +39,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>ResumeUrlGood</key>
+	<string>$(GOODRESUME_URL)</string>
+	<key>ResumeUrlBad</key>
+	<string>$(BADRESUME_URL)</string>
+	<key>ResumeUrlBadJson</key>
+	<string>$(BADJSONRESUME_URL)</string>
 </dict>
 </plist>

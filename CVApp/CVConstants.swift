@@ -15,4 +15,16 @@ struct CVConstants {
   static let connectionError = "Connection error"
   static let decodingError = "Failed to decode"
   static let alertOk = "OK"
+
+  static let infoPlistName = "Info"
+  static let infoPlistType = "plist"
+}
+
+
+// MARK: - ResumeURL enumeration
+/// The enumeration to test the profile behavior
+enum ResumeURL: String {
+  case success = "ResumeUrlGood"
+  case invalid = "ResumeUrlBad"
+  case noSections = "ResumeUrlBadJson"
 }

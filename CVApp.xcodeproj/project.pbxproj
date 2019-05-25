@@ -548,8 +548,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BADJSONRESUME_URL = "https://gist.githubusercontent.com/KevinDucker/399a14a581f8f210a64ef0aa2fb320e1/raw/0076338093a108e63033cd9093ebe92e0acc58af/CVJsonBad";
+				BADRESUME_URL = "https://gist.githubusercontent.com/KevinDucker//raw/CVJson.json";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DACYL2F7FG;
+				GOODRESUME_URL = "https://gist.githubusercontent.com/KevinDucker/7e0656d0bfeb59d125ace3f07082db1d/raw/3e60b3d8a1178bd6f50d70a097c9379396476887/CVJson.json";
 				INFOPLIST_FILE = CVApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -566,8 +569,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BADJSONRESUME_URL = "https://gist.githubusercontent.com/KevinDucker/399a14a581f8f210a64ef0aa2fb320e1/raw/0076338093a108e63033cd9093ebe92e0acc58af/CVJsonBad";
+				BADRESUME_URL = "https://gist.githubusercontent.com/KevinDucker//raw/CVJson.json";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DACYL2F7FG;
+				GOODRESUME_URL = "https://gist.githubusercontent.com/KevinDucker/7e0656d0bfeb59d125ace3f07082db1d/raw/3e60b3d8a1178bd6f50d70a097c9379396476887/CVJson.json";
 				INFOPLIST_FILE = CVApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
