@@ -25,10 +25,18 @@
 		8F08AF292298E9F300465E71 /* CVConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08AF282298E9F300465E71 /* CVConstants.swift */; };
 		8FC9859B229906F200261293 /* CVAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC9859A229906F200261293 /* CVAppTests.swift */; };
 		8FC985A32299253000261293 /* InteractorParseDataInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC985A22299253000261293 /* InteractorParseDataInViewModel.swift */; };
+		8FC985AB22992CEC00261293 /* CVAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC985AA22992CEC00261293 /* CVAppUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		8FC9859D229906F200261293 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F08AEEF2298727700465E71 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F08AEF62298727700465E71;
+			remoteInfo = CVApp;
+		};
+		8FC985AD22992CEC00261293 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8F08AEEF2298727700465E71 /* Project object */;
 			proxyType = 1;
@@ -60,6 +68,9 @@
 		8FC9859A229906F200261293 /* CVAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVAppTests.swift; sourceTree = "<group>"; };
 		8FC9859C229906F200261293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FC985A22299253000261293 /* InteractorParseDataInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorParseDataInViewModel.swift; sourceTree = "<group>"; };
+		8FC985A822992CEC00261293 /* CVAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CVAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FC985AA22992CEC00261293 /* CVAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVAppUITests.swift; sourceTree = "<group>"; };
+		8FC985AC22992CEC00261293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +89,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8FC985A522992CEC00261293 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -86,6 +104,7 @@
 			children = (
 				8F08AEF92298727700465E71 /* CVApp */,
 				8FC98599229906F200261293 /* CVAppTests */,
+				8FC985A922992CEC00261293 /* CVAppUITests */,
 				8F08AEF82298727700465E71 /* Products */,
 				8F08AF182298B3BD00465E71 /* Frameworks */,
 			);
@@ -96,6 +115,7 @@
 			children = (
 				8F08AEF72298727700465E71 /* CVApp.app */,
 				8FC98598229906F200261293 /* CVAppTests.xctest */,
+				8FC985A822992CEC00261293 /* CVAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +217,15 @@
 			path = CVAppTests;
 			sourceTree = "<group>";
 		};
+		8FC985A922992CEC00261293 /* CVAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8FC985AA22992CEC00261293 /* CVAppUITests.swift */,
+				8FC985AC22992CEC00261293 /* Info.plist */,
+			);
+			path = CVAppUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -235,6 +264,24 @@
 			productReference = 8FC98598229906F200261293 /* CVAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		8FC985A722992CEC00261293 /* CVAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FC985AF22992CEC00261293 /* Build configuration list for PBXNativeTarget "CVAppUITests" */;
+			buildPhases = (
+				8FC985A422992CEC00261293 /* Sources */,
+				8FC985A522992CEC00261293 /* Frameworks */,
+				8FC985A622992CEC00261293 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FC985AE22992CEC00261293 /* PBXTargetDependency */,
+			);
+			name = CVAppUITests;
+			productName = CVAppUITests;
+			productReference = 8FC985A822992CEC00261293 /* CVAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -249,6 +296,10 @@
 						CreatedOnToolsVersion = 10.1;
 					};
 					8FC98597229906F200261293 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 8F08AEF62298727700465E71;
+					};
+					8FC985A722992CEC00261293 = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 8F08AEF62298727700465E71;
 					};
@@ -269,6 +320,7 @@
 			targets = (
 				8F08AEF62298727700465E71 /* CVApp */,
 				8FC98597229906F200261293 /* CVAppTests */,
+				8FC985A722992CEC00261293 /* CVAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -286,6 +338,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8FC98596229906F200261293 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FC985A622992CEC00261293 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -322,6 +381,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8FC985A422992CEC00261293 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FC985AB22992CEC00261293 /* CVAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -329,6 +396,11 @@
 			isa = PBXTargetDependency;
 			target = 8F08AEF62298727700465E71 /* CVApp */;
 			targetProxy = 8FC9859D229906F200261293 /* PBXContainerItemProxy */;
+		};
+		8FC985AE22992CEC00261293 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F08AEF62298727700465E71 /* CVApp */;
+			targetProxy = 8FC985AD22992CEC00261293 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -479,7 +551,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.CVApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CVApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -497,7 +569,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.CVApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CVApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -544,6 +616,44 @@
 			};
 			name = Release;
 		};
+		8FC985B022992CEC00261293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DACYL2F7FG;
+				INFOPLIST_FILE = CVAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CVAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CVApp;
+			};
+			name = Debug;
+		};
+		8FC985B122992CEC00261293 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DACYL2F7FG;
+				INFOPLIST_FILE = CVAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.CVAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CVApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -570,6 +680,15 @@
 			buildConfigurations = (
 				8FC9859F229906F200261293 /* Debug */,
 				8FC985A0229906F200261293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FC985AF22992CEC00261293 /* Build configuration list for PBXNativeTarget "CVAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FC985B022992CEC00261293 /* Debug */,
+				8FC985B122992CEC00261293 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
