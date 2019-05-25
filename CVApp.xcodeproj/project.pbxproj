@@ -14,6 +14,13 @@
 		8F08AF052298727900465E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F08AF032298727900465E71 /* LaunchScreen.storyboard */; };
 		8F08AF0D229872A000465E71 /* CVModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08AF0C229872A000465E71 /* CVModels.swift */; };
 		8F08AF0F22989F3900465E71 /* CVConnectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08AF0E22989F3900465E71 /* CVConnectionHelper.swift */; };
+		8F08AF112298AAC600465E71 /* CVCellTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08AF102298AAC600465E71 /* CVCellTitle.swift */; };
+		8F08AF132298ABCD00465E71 /* CVViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08AF122298ABCD00465E71 /* CVViewModels.swift */; };
+		8F08AF152298AC7400465E71 /* CVProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08AF142298AC7400465E71 /* CVProtocols.swift */; };
+		8F08AF172298AF4E00465E71 /* CVPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08AF162298AF4E00465E71 /* CVPresenter.swift */; };
+		8F08AF1A2298B3BD00465E71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F08AF192298B3BD00465E71 /* UIKit.framework */; };
+		8F08AF1C2298B3F900465E71 /* CVInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08AF1B2298B3F900465E71 /* CVInteractor.swift */; };
+		8F08AF1E2298BFDD00465E71 /* CVRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08AF1D2298BFDD00465E71 /* CVRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		8F08AF062298727900465E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F08AF0C229872A000465E71 /* CVModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVModels.swift; sourceTree = "<group>"; };
 		8F08AF0E22989F3900465E71 /* CVConnectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVConnectionHelper.swift; sourceTree = "<group>"; };
+		8F08AF102298AAC600465E71 /* CVCellTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCellTitle.swift; sourceTree = "<group>"; };
+		8F08AF122298ABCD00465E71 /* CVViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVViewModels.swift; sourceTree = "<group>"; };
+		8F08AF142298AC7400465E71 /* CVProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVProtocols.swift; sourceTree = "<group>"; };
+		8F08AF162298AF4E00465E71 /* CVPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVPresenter.swift; sourceTree = "<group>"; };
+		8F08AF192298B3BD00465E71 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8F08AF1B2298B3F900465E71 /* CVInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVInteractor.swift; sourceTree = "<group>"; };
+		8F08AF1D2298BFDD00465E71 /* CVRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F08AF1A2298B3BD00465E71 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +59,7 @@
 			children = (
 				8F08AEF92298727700465E71 /* CVApp */,
 				8F08AEF82298727700465E71 /* Products */,
+				8F08AF182298B3BD00465E71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,8 +82,22 @@
 				8F08AF032298727900465E71 /* LaunchScreen.storyboard */,
 				8F08AF062298727900465E71 /* Info.plist */,
 				8F08AF0E22989F3900465E71 /* CVConnectionHelper.swift */,
+				8F08AF102298AAC600465E71 /* CVCellTitle.swift */,
+				8F08AF122298ABCD00465E71 /* CVViewModels.swift */,
+				8F08AF142298AC7400465E71 /* CVProtocols.swift */,
+				8F08AF162298AF4E00465E71 /* CVPresenter.swift */,
+				8F08AF1B2298B3F900465E71 /* CVInteractor.swift */,
+				8F08AF1D2298BFDD00465E71 /* CVRouter.swift */,
 			);
 			path = CVApp;
+			sourceTree = "<group>";
+		};
+		8F08AF182298B3BD00465E71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F08AF192298B3BD00465E71 /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,8 +172,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F08AF0F22989F3900465E71 /* CVConnectionHelper.swift in Sources */,
+				8F08AF132298ABCD00465E71 /* CVViewModels.swift in Sources */,
+				8F08AF152298AC7400465E71 /* CVProtocols.swift in Sources */,
+				8F08AF1E2298BFDD00465E71 /* CVRouter.swift in Sources */,
 				8F08AEFD2298727700465E71 /* ViewController.swift in Sources */,
 				8F08AF0D229872A000465E71 /* CVModels.swift in Sources */,
+				8F08AF172298AF4E00465E71 /* CVPresenter.swift in Sources */,
+				8F08AF112298AAC600465E71 /* CVCellTitle.swift in Sources */,
+				8F08AF1C2298B3F900465E71 /* CVInteractor.swift in Sources */,
 				8F08AEFB2298727700465E71 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,7 +336,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.CVApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,7 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.CVApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,0 +1,52 @@
+//
+//  CVCellTitle.swift
+//  CVApp
+//
+//  Created by Kevin Ducker Marin on 5/24/19.
+//  Copyright © 2019 Kevin Ducker Marin. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+class CVCellTitle: UITableViewCell {
+
+  // Identifier of the cell
+  static let nib = "CVCellTitle"
+  let titleSize: CGFloat = 16
+
+  @IBOutlet weak var cvContent: UIView!
+  @IBOutlet weak var cvPhoto: UIImageView!
+  @IBOutlet weak var cvName: UILabel!
+
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    setup()
+  }
+
+  /*
+   Setup the elements of the cell.
+   */
+  func setup() {
+    self.backgroundColor = .groupTableViewBackground
+    cvContent.layer.cornerRadius = 4
+    cvContent.layer.masksToBounds = false
+    cvContent.layer.shadowOffset = CGSize(width: 0, height: 0)
+    cvContent.layer.shadowColor = UIColor.gray.cgColor
+    cvContent.layer.shadowOpacity = 0.23
+    cvContent.layer.shadowRadius = 8
+
+    cvPhoto.layer.cornerRadius = 4
+    cvPhoto.image = #imageLiteral(resourceName: "DisclosureBlue")
+
+    cvName.textAlignment = .left
+    cvName.textColor = UIColor.darkGray
+  }
+}
+
+extension CVCellTitle: CVCellConfigure {
+  func configure(element: CVViewModelProtocol) {
+    cvName.text = element.title
+    cvPhoto.image = UIImage(named: element.image)
+  }
+}

@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
-struct CVData {
+struct CVData: Codable {
   let name: String
   let summary: String
   let summaryQualifications: [Quialifications]
@@ -21,24 +22,24 @@ enum Levels {
   case advanced
 }
 
-struct Quialifications {
+struct Quialifications: Codable {
   let name: String
-  let level: Levels
+  let level: String
 }
 
-struct Languages {
+struct Languages: Codable {
   let name: String
-  let level: Levels
+  let level: String
 }
 
-struct Jobs {
+struct Jobs: Codable {
   let name: String
   let position: String
-  let seniority: Seniority
+  let seniority: String
   let description: [JobDescriptions]
 }
 
-struct JobDescriptions {
+struct JobDescriptions: Codable {
   let projectName: String
   let projectDescription: String
 }
