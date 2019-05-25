@@ -1,10 +1,6 @@
 //
 //  CVInteractor.swift
 //  CVApp
-//
-//  Created by Kevin Ducker Marin on 5/24/19.
-//  Copyright © 2019 Kevin Ducker Marin. All rights reserved.
-//
 
 import Foundation
 
@@ -17,12 +13,15 @@ class CVInteractor {
   typealias constants = CVConstants
 
   private func parseDataInViewModel(cvData: CVData) {
-    let model = [
+    var model = [
       CVViewModel(title: constants.name, desc: cvData.name),
       CVViewModel(title: constants.sumary, desc: cvData.summary),
       CVViewModel(title: constants.summaryQualifications, desc: cvData.summaryQualifications),
       CVViewModel(title: constants.languages, desc: cvData.languages),
-      CVViewModel(title: constants.carrer, desc: (cvData.carrer.first?.description)!)]
+      CVViewModel(title: constants.carrer, desc: "")]
+    cvData.carrer.forEach {
+      model.append(CVViewModel(title: $0.name, desc: $0.description))
+    }
     presenter?.didGetData(model: model)
   }
 }

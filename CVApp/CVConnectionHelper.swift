@@ -1,10 +1,6 @@
 //
 //  CVConnectionHelper.swift
 //  CVApp
-//
-//  Created by Kevin Ducker Marin on 5/24/19.
-//  Copyright © 2019 Kevin Ducker Marin. All rights reserved.
-//
 
 import Foundation
 
@@ -26,7 +22,6 @@ class CVConnectionHelper {
       if let error = error {
         DispatchQueue.main.async {
           debugPrint("Fail to get data", error)
-          //Error alert Do it
           return
         }
 
@@ -35,13 +30,11 @@ class CVConnectionHelper {
           let decoder = JSONDecoder()
           decoder.keyDecodingStrategy = .convertFromSnakeCase
           let cv = try decoder.decode(CVData.self, from: data)
-          print(cv)
           DispatchQueue.main.async {
             self.interactor?.didGetCVDataFromService(cvData: cv)
           }
         } catch let jsonError {
           debugPrint("Failed to decode", jsonError)
-          //Error alert Do it
         }
       } else {
         print("Connection error")

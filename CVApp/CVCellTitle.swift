@@ -1,10 +1,6 @@
 //
 //  CVCellTitle.swift
 //  CVApp
-//
-//  Created by Kevin Ducker Marin on 5/24/19.
-//  Copyright © 2019 Kevin Ducker Marin. All rights reserved.
-//
 
 import Foundation
 import UIKit
@@ -38,7 +34,7 @@ class CVCellTitle: UITableViewCell {
 
     cvName.textAlignment = .left
     cvName.textColor = UIColor.darkGray
-    cvDesc.textAlignment = .left
+    cvDesc.textAlignment = .justified
     cvDesc.textColor = UIColor.darkGray
   }
 }
