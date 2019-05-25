@@ -16,6 +16,7 @@ class CVPresenter {
 
 }
 
+// MARK: CVViewToPresenterProtocol implementation
 extension CVPresenter: CVViewToPresenterProtocol {
 
   /**
@@ -42,16 +43,9 @@ extension CVPresenter: CVViewToPresenterProtocol {
       break
     }
   }
-
-  /*
-   Pop ViewController
-   */
-  func popViewController() {
-    guard let currentView = viewController else { return }
-    router?.popViewController(from: currentView)
-  }
 }
 
+// MARK: CVInteractorToPresenterProtocol implementation
 extension CVPresenter: CVInteractorToPresenterProtocol {
   func didGetData(model: [CVViewModel]) {
     elements = model

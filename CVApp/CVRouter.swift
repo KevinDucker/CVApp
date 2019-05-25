@@ -15,6 +15,7 @@ class CVRouter {
     self.loadCV()
   }
 
+  // MARK: Private functions
   private func loadCV() {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let VC: ViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
@@ -31,6 +32,7 @@ class CVRouter {
   }
 }
 
+// MARK: CVPresenterToRouterProtocol implementation
 extension CVRouter: CVPresenterToRouterProtocol {
   func popViewController(from viewController: UIViewController) {
   }

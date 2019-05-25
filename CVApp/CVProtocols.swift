@@ -14,7 +14,6 @@ protocol CVViewToPresenterProtocol {
   var router: CVPresenterToRouterProtocol? { get set }
   var viewController: ViewController? { get set }
   func initialLoad(from viewController: ViewController)
-  func popViewController()
   func configureCell(cell: UITableViewCell, element: CVViewModelProtocol)
 }
 

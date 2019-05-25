@@ -12,18 +12,13 @@ class ViewController: UIViewController {
   var presenter: CVViewToPresenterProtocol?
   var elements: [CVViewModelProtocol]?
 
+  // MARK: - Lifecycle functions
   override func viewDidLoad() {
     super.viewDidLoad()
     setup()
   }
 
-  /**
-   * Go to back View
-   **/
-  @objc func backView() {
-    presenter?.popViewController()
-  }
-
+  // MARK: - Private functions
   /**
    * Setup the elements which are used by the view
    **/
@@ -39,14 +34,14 @@ class ViewController: UIViewController {
   /**
    * Register Table Cells so the TableView can find the Xib associated files
    **/
-  func registerTableCells() {
+  private func registerTableCells() {
     tableView.register(UINib(nibName: CVCellTitle.nib, bundle: nil), forCellReuseIdentifier: CVCellTitle.nib)
   }
 
   /**
    * Obtain the Table Cells nib name to find the Xib associated files
    **/
-  func getCellType(index: Int) -> String {
+  private func getCellType(index: Int) -> String {
     guard let elements = elements else { return "" }
     switch elements[index] {
     case is CVViewModel:
@@ -58,7 +53,7 @@ class ViewController: UIViewController {
 
 }
 
-// MARK: InvestmentsPresenterToViewProtocol implementation
+// MARK: CVPresenterToViewProtocol implementation
 extension ViewController: CVPresenterToViewProtocol {
 
   /*

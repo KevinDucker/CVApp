@@ -10,8 +10,10 @@ class CVInteractor {
   var presenter: CVInteractorToPresenterProtocol?
   var dataHelper: CVInteractorToAPIDataManagerProtocol?
 
+  // MARK: Typealias
   typealias constants = CVConstants
 
+  // MARK: Private functions
   private func parseDataInViewModel(cvData: CVData) {
     var model = [
       CVViewModel(title: constants.name, desc: cvData.name),
@@ -26,12 +28,14 @@ class CVInteractor {
   }
 }
 
+// MARK: CVPresenterToInteractorProtocol implementation
 extension CVInteractor: CVPresenterToInteractorProtocol {
   func getCVData() {
     dataHelper?.getCVDataFromService()
   }
 }
 
+// MARK: CVAPIDataManagerToInteractorProtocol implementation
 extension CVInteractor: CVAPIDataManagerToInteractorProtocol {
   func didGetCVDataFromService(cvData: CVData) {
     parseDataInViewModel(cvData: cvData)
